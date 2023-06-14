@@ -20,4 +20,10 @@ export class HttpService {
   postDatos(body: any) {
     return this.http.post(`${this.url2}posts`, body);
   }
+  UpdateDatos(id: any, body: any) {
+    return this.http.put(`${this.url2}posts/${id}`, body);
+  }
+  deleteDatos(id: any) {
+    return this.http.delete(`${this.url2}posts/${id}`);
+  }
 }

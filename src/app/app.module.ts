@@ -15,13 +15,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { DialogFormComponent } from './dialog-form/dialog-form.component';
+import { DialogFormComponent } from './Dialogs/dialog-form/dialog-form.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatTableModule } from '@angular/material/table';
+import { MatDividerModule } from '@angular/material/divider';
+import { DialogoDeleteComponent } from './Dialogs/dialogo-delete/dialogo-delete.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -31,6 +35,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     NotFoundComponent,
     ProductoComponent,
     DialogFormComponent,
+    DialogoDeleteComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,6 +56,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatGridListModule,
     MatSnackBarModule,
     MatProgressBarModule,
+    MatPaginatorModule,
+    MatDividerModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

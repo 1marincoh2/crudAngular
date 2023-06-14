@@ -1,0 +1,9 @@
+<h1 mat-dialog-title>Eliminar producto</h1>
+<hr class="divider">
+<mat-dialog-content>
+ <h2 >¿Desea eliminar el Producto <a class="textColor">"{{dataDelete.title}}"</a>?</h2>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close color="accent">Cancelar</button>
+  <button mat-raised-button  color="warn" (click)="eliminarDato()" cdkFocusInitial >Si, eliminar</button>
+</mat-dialog-actions>

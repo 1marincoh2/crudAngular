@@ -1,0 +1,46 @@
+<h1 mat-dialog-title>{{tituloAction}}</h1>
+<hr class="divider">
+<mat-dialog-content>
+  <form [formGroup]="productoForm">
+    <mat-grid-list cols="1" rowHeight="100px">
+      <mat-grid-tile >
+        <mat-form-field  appearance="outline">
+          <mat-label>Nombre Del Producto</mat-label>
+          <input matInput placeholder="Nombre Del Producto" formControlName="title">
+          <mat-error *ngIf="productoForm.controls.title.invalid">Comple el campo</mat-error>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Link de Imagen</mat-label>
+          <input matInput placeholder="Link de imagen" formControlName="thumbnail">
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Descripcion</mat-label>
+          <input matInput placeholder="Descripcion" formControlName="description">
+          <mat-error *ngIf="productoForm.controls.description.invalid">Comple el campo</mat-error>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <mat-form-field appearance="outline">
+          <mat-label>Marca</mat-label>
+          <input matInput placeholder="Marca" formControlName="brand">
+          <mat-error *ngIf="productoForm.controls.brand.invalid">Comple el campo</mat-error>
+        </mat-form-field>
+      </mat-grid-tile>
+      <mat-grid-tile >
+        <mat-form-field appearance="outline">
+          <mat-label>Categoria</mat-label>
+          <input matInput placeholder="Categoria" formControlName="category">
+          <mat-error *ngIf="productoForm.controls.category.invalid">Comple el campo</mat-error>
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-raised-button mat-dialog-close color="warn">Cancelar</button>
+  <button mat-raised-button  color="primary" (click)="addEditDato()" [disabled]="productoForm.invalid">{{btnAction}}</button>
+</mat-dialog-actions>

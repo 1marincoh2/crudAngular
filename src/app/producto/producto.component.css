@@ -70,22 +70,24 @@
   color: white;
 }
 .mat-column-description {
-  width: 30%;
+  width: 20%;
 }
 
 .mat-column-Prodcutos {
   width: 15%;
 }
 
-.mat-column-imagenes {
+.mat-column-thumbnail {
   width: 20%;
 }
 .custom-table {
   margin-top: 20px;
 }
-
+.image {
+  width: 80%;
+}
 .p {
-  margin-top: 20%;
+  margin-top: 10%;
 }
 .progress {
   margin-top: 1%;
